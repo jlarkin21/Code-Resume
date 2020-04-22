@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Bpv-Bb-Qgd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Motion Test Instructions-->
+        <scene sceneID="LpD-bf-Vg9">
+            <objects>
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="jVN-Xx-G0i" customClass="MotionTestInstructionsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MWg-3t-lv1"/>
+                        <viewControllerLayoutGuide type="bottom" id="eVL-I4-va9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jFK-Uu-8EZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJV-2C-6iW">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="        ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="14.666666984558105" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" minimumLineHeight="20" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k9P-CI-mwv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The range of motion test will measure the range of motion in each of your limbs. This test will also measure how you are able to sustain a movement over the course of the test.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Motion Test Instructions" id="lSs-j4-UWM">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="L2G-zY-HB9">
+                            <connections>
+                                <segue destination="LRr-22-o9t" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="gXn-vp-J5g"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Begin" id="Dag-TB-Cw1">
+                            <connections>
+                                <segue destination="sxw-Kd-vuQ" kind="push" identifier="MotionTestResultsSegue" id="JC4-w6-dMz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fen-eL-xww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LRr-22-o9t" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-2314.5" y="1854.5"/>
+        </scene>
+        <!--Right Arm Motion Test-->
+        <scene sceneID="npW-Lc-bU9">
+            <objects>
+                <viewController id="sxw-Kd-vuQ" customClass="MotionTestViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V5Y-Tl-ah1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ax6-NN-xh7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nKD-RS-ONJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsW-Cf-6xf">
+                                <rect key="frame" x="107" y="275" width="161" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Right Arm Motion Test" id="ic5-ht-0Zx">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="uL8-4e-7Ah">
+                            <connections>
+                                <segue destination="PKT-iD-avA" kind="push" identifier="MotionTestResultsSegue" id="kSY-OV-DyJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdownTimer" destination="lsW-Cf-6xf" id="cRZ-S0-fuE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkh-kA-0Cv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2314.5" y="2729.5"/>
+        </scene>
+        <!--navCon-->
+        <scene sceneID="yS4-k0-QUM">
+            <objects>
+                <navigationController toolbarHidden="NO" id="Bpv-Bb-Qgd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="navCon" id="xNM-CB-Y9s"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RdV-jG-eyR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4Fb-5L-4et">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="jVN-Xx-G0i" kind="relationship" relationship="rootViewController" id="Rq1-7z-95a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0w-8l-t5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2315" y="961"/>
+        </scene>
+        <!--Motion Test Results-->
+        <scene sceneID="Tmb-HX-i7a">
+            <objects>
+                <viewController id="PKT-iD-avA" customClass="MotionTestResultsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="llN-HQ-bNJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="a5D-sd-qfl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tDk-JP-azJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWX-JH-Vf0" customClass="GraphView" customModule="MotionGraphs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ICt-ip-DR9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rWX-JH-Vf0" firstAttribute="leading" secondItem="tDk-JP-azJ" secondAttribute="leading" id="7hi-w0-zRs"/>
+                            <constraint firstItem="rWX-JH-Vf0" firstAttribute="top" secondItem="llN-HQ-bNJ" secondAttribute="bottom" id="e9Z-8X-Vu7"/>
+                            <constraint firstAttribute="trailing" secondItem="rWX-JH-Vf0" secondAttribute="trailing" id="j9l-OZ-a7G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Motion Test Results" id="9Ks-rp-oVN">
+                        <barButtonItem key="rightBarButtonItem" title="Finish" id="Ghn-Tn-RrE">
+                            <connections>
+                                <segue destination="tFY-nl-ye2" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="1nZ-L6-K4Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="graphView" destination="rWX-JH-Vf0" id="iGG-Uo-GbD"/>
+                    </connections>
+                </viewController>
+                <exit id="tFY-nl-ye2" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXC-ak-5Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2315" y="3551"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

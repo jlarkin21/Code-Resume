@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="FAG-vy-Vfa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trace Test-->
+        <scene sceneID="oRD-VF-eB0">
+            <objects>
+                <viewController id="wZX-jR-DYr" customClass="TraceTestViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3z6-9z-oTZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xsb-A1-nnh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Xw-kq-5ks">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trace Test Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iK1-Qc-hhC">
+                                <rect key="frame" x="104" y="323" width="166" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trace Test" id="F5S-0y-bKd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UcH-zR-fnT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-169" y="2711"/>
+        </scene>
+        <!--Trace Test Instructions-->
+        <scene sceneID="TwB-DR-bBy">
+            <objects>
+                <viewController id="x2C-1W-K5c" customClass="TraceTestInstructionsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b2D-tW-Mq7"/>
+                        <viewControllerLayoutGuide type="bottom" id="xOo-MB-0Mi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A9T-J0-ds4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQM-R3-MoZ">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Instructions
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis metus sit amet mollis auctor. Duis metus nunc, ultricies tempus lacus ac, aliquet maximus enim. Pellentesque commodo leo imperdiet varius tincidunt. Etiam vitae orci pretium, accumsan erat et, tempor sem. Nam vel enim felis. Etiam in viverra ex. Suspendisse potenti.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Donec elementum odio eros, vitae iaculis risus sagittis sit amet. Nullam maximus, leo nec interdum condimentum, est odio tincidunt dui, vitae dictum augue mi ut est. Vestibulum metus sem, dapibus nec leo eu, mattis auctor dolor. Aenean sed nisi at leo consequat imperdiet id ut risus. Ut gravida tincidunt augue vel imperdiet. Aenean sagittis ligula eu mi vehicula, eget pharetra leo auctor. Vivamus at ex ut ligula eleifend porta a id lectus. Maecenas in mauris quis lorem feugiat mattis non sed diam. Quisque facilisis dictum dui, nec finibus risus tempor in.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".SFNSText"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut eget rhoncus velit. Morbi id erat diam. Nullam tempus felis sit amet pulvinar sodales. Phasellus elementum condimentum justo. Donec molestie molestie lectus, in molestie lacus. Maecenas consequat, metus quis volutpat hendrerit, risus purus porttitor nisi, at placerat purus nisl ac diam. Cras sollicitudin nibh eu leo porttitor, quis elementum eros ornare. Donec non mattis tortor. Praesent maximus velit sit amet augue porttitor fermentum. Nunc convallis libero at vestibulum malesuada. Maecenas finibus sem sed elit volutpat, eu vestibulum urna tincidunt. Donec sed nisl luctus, vulputate arcu nec, sodales enim. Vivamus lacinia magna at arcu porttitor elementum. In mattis mauris at cursus euismod.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trace Test Instructions" id="hKO-Hp-7IG">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="iVF-JU-1dI">
+                            <connections>
+                                <segue destination="zDw-Xb-8kd" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="smV-UZ-NqU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Begin" id="Xp6-6R-Z5l">
+                            <connections>
+                                <segue destination="wZX-jR-DYr" kind="modal" id="9wo-QT-qw2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgF-Tk-kCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zDw-Xb-8kd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-169" y="1836"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lWl-eT-e2o">
+            <objects>
+                <navigationController id="FAG-vy-Vfa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SOo-am-dZj">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="P4s-LB-HMM"/>
+                    </navigationItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0w8-Q9-Fio">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x2C-1W-K5c" kind="relationship" relationship="rootViewController" id="M8A-tX-Iit"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKH-YO-9iW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-170" y="961"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

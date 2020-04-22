@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="roR-OE-TPF">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ALS iKinetics-->
+        <scene sceneID="Zpw-P1-QUf">
+            <objects>
+                <viewController id="DGz-WR-HBe" customClass="HomeViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AHJ-hg-mPO"/>
+                        <viewControllerLayoutGuide type="bottom" id="A89-Ms-gO3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wzC-NW-B22">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTs-cs-pPO">
+                                <rect key="frame" x="-8" y="362" width="337" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="337" id="TMI-g7-1dv"/>
+                                    <constraint firstAttribute="height" constant="91" id="mlv-So-66y"/>
+                                </constraints>
+                                <string key="text">Welcome to ALS iKinetics. Use the icons below to begin a test. 
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ALSKineticsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NPu-kc-Hko">
+                                <rect key="frame" x="40" y="96" width="240" height="237"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="237" id="0cN-yC-NXa"/>
+                                    <constraint firstAttribute="width" constant="240" id="DC3-iz-PlD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cTs-cs-pPO" firstAttribute="top" secondItem="NPu-kc-Hko" secondAttribute="bottom" constant="53" id="MBc-YC-Jqk"/>
+                            <constraint firstItem="NPu-kc-Hko" firstAttribute="centerY" secondItem="wzC-NW-B22" secondAttribute="centerY" constant="-93.5" id="NC9-mx-rnt"/>
+                            <constraint firstItem="NPu-kc-Hko" firstAttribute="centerX" secondItem="wzC-NW-B22" secondAttribute="centerX" id="Qah-SS-LXf"/>
+                            <constraint firstItem="cTs-cs-pPO" firstAttribute="centerX" secondItem="wzC-NW-B22" secondAttribute="centerX" id="Yuk-0Q-xeW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ALS iKinetics" id="n1f-RU-nv8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcC-kg-8hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1850" y="-91"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="MbY-67-msX">
+            <objects>
+                <tabBarController id="roR-OE-TPF" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="LZt-qC-4fm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uTQ-L6-Pjg" kind="relationship" relationship="viewControllers" id="14I-Wa-4iu"/>
+                        <segue destination="mZc-QT-eSm" kind="relationship" relationship="viewControllers" id="7pa-J2-URM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xX5-vm-PgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1557" y="-2009"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="HQp-Ai-wUf">
+            <objects>
+                <navigationController id="uTQ-L6-Pjg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home-7" id="XE4-4q-LJF"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nCG-gP-BM4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DGz-WR-HBe" kind="relationship" relationship="rootViewController" id="fae-ZO-DdV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ma-sE-4Zx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1848" y="-1041"/>
+        </scene>
+        <!--Tests-->
+        <scene sceneID="w9r-5j-9JT">
+            <objects>
+                <navigationController id="mZc-QT-eSm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tests" image="stethescope" id="ZgO-gC-0hy"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Zl-0k-boR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h2W-DK-ZPI" kind="relationship" relationship="rootViewController" id="0pe-eW-1Rv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHX-fi-OlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1240" y="-1042"/>
+        </scene>
+        <!--ALS Tests-->
+        <scene sceneID="Afh-R4-M5i">
+            <objects>
+                <tableViewController id="h2W-DK-ZPI" customClass="TestListingTableViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DVN-DI-fDd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="lEm-Fm-4zM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="nKV-od-kUa" style="IBUITableViewCellStyleDefault" id="bfc-wA-lWz">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bfc-wA-lWz" id="qQW-Pn-YJA">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Range of Motion Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nKV-od-kUa">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="izV-Fr-tMo" kind="modal" id="ezr-k1-6q8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="idn-li-RjB" style="IBUITableViewCellStyleDefault" id="0bW-lG-PHw">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bW-lG-PHw" id="3MF-G4-gvh">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tap Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="idn-li-RjB">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="L9h-nn-b6H" kind="modal" id="ydf-XK-PWK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="pZh-dY-Mel" style="IBUITableViewCellStyleDefault" id="PA2-cH-zbL">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PA2-cH-zbL" id="Pn4-4Y-DXc">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Voice Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pZh-dY-Mel">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="iWs-IO-GD2" kind="modal" id="pyP-OM-V5Q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="h2W-DK-ZPI" id="uqe-YB-pUM"/>
+                            <outlet property="delegate" destination="h2W-DK-ZPI" id="dfr-uo-zoh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ALS Tests" id="w0E-C8-mbu">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="ndm-BP-frq"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLf-ua-PxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1241" y="-91"/>
+        </scene>
+        <!--VoiceTest-->
+        <scene sceneID="zLG-JS-xXG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VoiceTest" id="iWs-IO-GD2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuv-qc-wIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-963" y="961"/>
+        </scene>
+        <!--MotionTest-->
+        <scene sceneID="Vbk-vK-Gmk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MotionTest" id="izV-Fr-tMo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8O-5e-ZiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2315" y="961"/>
+        </scene>
+        <!--TapTest-->
+        <scene sceneID="Xxz-LB-5YL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TapTest" id="L9h-nn-b6H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yB4-hT-foR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1632" y="961"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ALSKineticsIcon" width="180" height="180"/>
+        <image name="home-7" width="30" height="30"/>
+        <image name="stethescope" width="50" height="52"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

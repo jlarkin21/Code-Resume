@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Bpv-Bb-Qgd">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Motion Test Instructions-->
+        <scene sceneID="LpD-bf-Vg9">
+            <objects>
+                <viewController storyboardIdentifier="RightArmFront" extendedLayoutIncludesOpaqueBars="YES" id="jVN-Xx-G0i" customClass="MotionTestInstructionsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MWg-3t-lv1"/>
+                        <viewControllerLayoutGuide type="bottom" id="eVL-I4-va9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jFK-Uu-8EZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-14-p9X">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="z8U-mj-1gg" appends="YES" id="X1T-dz-TAv"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Motion Test Instructions" id="lSs-j4-UWM">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="L2G-zY-HB9">
+                            <connections>
+                                <segue destination="LRr-22-o9t" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="gXn-vp-J5g"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Begin" id="Dag-TB-Cw1">
+                            <connections>
+                                <segue destination="sxw-Kd-vuQ" kind="push" identifier="" id="BcD-N6-RYD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="Z8O-14-p9X" id="3UJ-gu-Rtk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fen-eL-xww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LRr-22-o9t" userLabel="Exit" sceneMemberID="exit"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="z8U-mj-1gg"/>
+            </objects>
+            <point key="canvasLocation" x="-3840" y="1160"/>
+        </scene>
+        <!--Right Arm Front Motion Test-->
+        <scene sceneID="npW-Lc-bU9">
+            <objects>
+                <viewController id="sxw-Kd-vuQ" customClass="MotionTestViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V5Y-Tl-ah1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ax6-NN-xh7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nKD-RS-ONJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The test will begin after the beep in " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChT-FL-P7x">
+                                <rect key="frame" x="72" y="188" width="271" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="cde-eW-MXD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsW-Cf-6xf">
+                                <rect key="frame" x="127" y="275" width="161" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="1Cm-0x-c8Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ChT-FL-P7x" firstAttribute="leading" secondItem="nKD-RS-ONJ" secondAttribute="leadingMargin" constant="52" id="37N-Y3-uV5"/>
+                            <constraint firstItem="lsW-Cf-6xf" firstAttribute="top" secondItem="ChT-FL-P7x" secondAttribute="bottom" constant="8" id="JMi-q6-Xku"/>
+                            <constraint firstItem="lsW-Cf-6xf" firstAttribute="leading" secondItem="nKD-RS-ONJ" secondAttribute="leadingMargin" constant="107" id="ecp-nA-h0O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lsW-Cf-6xf" secondAttribute="trailing" constant="106" id="erT-he-Ces"/>
+                            <constraint firstItem="ChT-FL-P7x" firstAttribute="top" secondItem="V5Y-Tl-ah1" secondAttribute="bottom" constant="124" id="fOQ-cp-TZr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ChT-FL-P7x" secondAttribute="trailing" constant="51" id="qVC-Pl-mFG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Right Arm Front Motion Test" id="ic5-ht-0Zx">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="uL8-4e-7Ah">
+                            <connections>
+                                <segue destination="PKT-iD-avA" kind="push" identifier="MotionTestResultsSegue" id="kSY-OV-DyJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdownTimer" destination="lsW-Cf-6xf" id="cRZ-S0-fuE"/>
+                        <outlet property="nextButton" destination="uL8-4e-7Ah" id="ccQ-wp-qVp"/>
+                        <outlet property="testLabel" destination="ChT-FL-P7x" id="xA7-zY-RqG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkh-kA-0Cv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3841" y="2804"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iNU-X3-ALF">
+            <objects>
+                <navigationController id="Dei-bS-8hS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bmr-Wd-fl1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sxw-Kd-vuQ" kind="relationship" relationship="rootViewController" id="Iwi-GA-zOs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJs-LU-1as" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4169" y="1953"/>
+        </scene>
+        <!--navCon-->
+        <scene sceneID="yS4-k0-QUM">
+            <objects>
+                <navigationController storyboardIdentifier="mainNavController" useStoryboardIdentifierAsRestorationIdentifier="YES" toolbarHidden="NO" id="Bpv-Bb-Qgd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="navCon" id="xNM-CB-Y9s"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RdV-jG-eyR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4Fb-5L-4et">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="M7M-zC-f48" kind="relationship" relationship="rootViewController" id="wXe-Tn-UiR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0w-8l-t5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3227" y="181"/>
+        </scene>
+        <!--Range of Motion Tests-->
+        <scene sceneID="k4R-al-I16">
+            <objects>
+                <tableViewController id="M7M-zC-f48" customClass="MotionTestTableViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fbt-IF-z8W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="LUZ-AJ-vfl">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LUZ-AJ-vfl" id="vF6-BR-gnh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="M7M-zC-f48" id="98M-zv-OTr"/>
+                            <outlet property="delegate" destination="M7M-zC-f48" id="kkp-hu-SBp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Range of Motion Tests" id="60j-OA-m96">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="2XF-4C-WMy">
+                            <connections>
+                                <segue destination="B6c-nh-k3D" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="1u2-XS-xk2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHE-2X-gmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="B6c-nh-k3D" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-2609" y="170"/>
+        </scene>
+        <!--Motion Test Results-->
+        <scene sceneID="vgy-r6-UZQ">
+            <objects>
+                <viewController id="PKT-iD-avA" customClass="MotionTestResultsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="llN-HQ-bNJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="a5D-sd-qfl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tDk-JP-azJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWX-JH-Vf0" userLabel="ResultsGraphView" customClass="GraphView" customModule="MotionGraphs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="147"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-3t-AVL" userLabel="TableContainer" customClass="UITableView" customModule="MotionGraphs" customModuleProvider="target">
+                                <rect key="frame" x="21" y="368" width="372" height="368"/>
+                                <connections>
+                                    <segue destination="hj8-T4-3Sx" kind="embed" identifier="ResultsTableSegue" id="7Mo-P6-rkl"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-Qt-iDy" userLabel="LabelContainer">
+                                <rect key="frame" x="21" y="219" width="372" height="149"/>
+                                <connections>
+                                    <segue destination="fDT-cK-BV5" kind="embed" id="iz4-zg-jdK"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eca-6I-61G">
+                                <rect key="frame" x="94" y="267" width="226" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="-2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rWX-JH-Vf0" firstAttribute="leading" secondItem="tDk-JP-azJ" secondAttribute="leading" id="7hi-w0-zRs"/>
+                            <constraint firstItem="7Zf-3t-AVL" firstAttribute="centerX" secondItem="tDk-JP-azJ" secondAttribute="centerX" id="A9C-wl-2Gs"/>
+                            <constraint firstItem="eca-6I-61G" firstAttribute="centerY" secondItem="6Uh-Qt-iDy" secondAttribute="centerY" id="OBq-Cq-QWn"/>
+                            <constraint firstItem="7Zf-3t-AVL" firstAttribute="top" secondItem="tDk-JP-azJ" secondAttribute="centerY" id="RAN-qZ-LeV"/>
+                            <constraint firstItem="rWX-JH-Vf0" firstAttribute="top" secondItem="llN-HQ-bNJ" secondAttribute="bottom" constant="8" symbolic="YES" id="VWQ-cM-pbF"/>
+                            <constraint firstItem="6Uh-Qt-iDy" firstAttribute="leading" secondItem="7Zf-3t-AVL" secondAttribute="leading" id="YA4-qf-z8W"/>
+                            <constraint firstItem="rWX-JH-Vf0" firstAttribute="width" secondItem="tDk-JP-azJ" secondAttribute="width" id="ady-22-1Wg"/>
+                            <constraint firstItem="eca-6I-61G" firstAttribute="centerX" secondItem="6Uh-Qt-iDy" secondAttribute="centerX" id="jOG-l4-Aoo"/>
+                            <constraint firstItem="6Uh-Qt-iDy" firstAttribute="width" secondItem="7Zf-3t-AVL" secondAttribute="width" id="kG3-PW-MmR"/>
+                            <constraint firstItem="7Zf-3t-AVL" firstAttribute="bottom" secondItem="a5D-sd-qfl" secondAttribute="top" id="nJA-5g-BK9"/>
+                            <constraint firstItem="6Uh-Qt-iDy" firstAttribute="top" secondItem="rWX-JH-Vf0" secondAttribute="bottom" id="rbS-Al-Z3b"/>
+                            <constraint firstItem="7Zf-3t-AVL" firstAttribute="width" secondItem="tDk-JP-azJ" secondAttribute="width" multiplier="0.9" id="shi-jT-LR6"/>
+                            <constraint firstItem="6Uh-Qt-iDy" firstAttribute="bottom" secondItem="7Zf-3t-AVL" secondAttribute="top" id="tjb-rf-CKB"/>
+                            <constraint firstItem="rWX-JH-Vf0" firstAttribute="height" secondItem="tDk-JP-azJ" secondAttribute="height" multiplier="0.2" id="vD9-NY-zqY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Motion Test Results" id="9Ks-rp-oVN">
+                        <barButtonItem key="rightBarButtonItem" title="Finish" id="Ghn-Tn-RrE">
+                            <connections>
+                                <segue destination="tFY-nl-ye2" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="1nZ-L6-K4Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="graphView" destination="rWX-JH-Vf0" id="iGG-Uo-GbD"/>
+                    </connections>
+                </viewController>
+                <exit id="tFY-nl-ye2" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXC-ak-5Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2682" y="4500"/>
+        </scene>
+        <!--Motion Test Results Table View Controller-->
+        <scene sceneID="vCH-Xv-eKh">
+            <objects>
+                <tableViewController id="hj8-T4-3Sx" customClass="MotionTestResultsTableViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1nw-3z-iLA">
+                        <rect key="frame" x="0.0" y="0.0" width="372" height="368"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TestResultsCell" id="63G-gK-J5t" customClass="MotionTestResultsTableCell" customModule="MotionGraphs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="372" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="63G-gK-J5t" id="JAU-97-RUR">
+                                    <rect key="frame" x="0.0" y="0.0" width="372" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Velocity(degrees/sec):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jO5-bB-KxI" userLabel="StringLabel">
+                                            <rect key="frame" x="9" y="8" width="217" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="-1" height="-1"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izG-zU-2MO" userLabel="ValueLabel">
+                                            <rect key="frame" x="251" y="8" width="95" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="-2" height="-2"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="izG-zU-2MO" firstAttribute="trailing" secondItem="JAU-97-RUR" secondAttribute="trailingMargin" multiplier="0.95" id="7hB-ZW-Flr"/>
+                                        <constraint firstItem="jO5-bB-KxI" firstAttribute="top" secondItem="JAU-97-RUR" secondAttribute="topMargin" id="Drc-vg-gbp"/>
+                                        <constraint firstItem="jO5-bB-KxI" firstAttribute="leading" secondItem="JAU-97-RUR" secondAttribute="leadingMargin" multiplier="1.1" id="EbW-6r-B5d"/>
+                                        <constraint firstItem="jO5-bB-KxI" firstAttribute="bottom" secondItem="JAU-97-RUR" secondAttribute="bottomMargin" id="PlM-jo-M0T"/>
+                                        <constraint firstItem="izG-zU-2MO" firstAttribute="leading" secondItem="JAU-97-RUR" secondAttribute="centerXWithinMargins" multiplier="1.35" id="ZHS-Yr-5qh"/>
+                                        <constraint firstItem="jO5-bB-KxI" firstAttribute="trailing" secondItem="izG-zU-2MO" secondAttribute="leading" multiplier="0.9" id="aMt-wR-a8v"/>
+                                        <constraint firstItem="izG-zU-2MO" firstAttribute="top" secondItem="jO5-bB-KxI" secondAttribute="top" id="m9a-bf-Z0c"/>
+                                        <constraint firstItem="izG-zU-2MO" firstAttribute="bottom" secondItem="jO5-bB-KxI" secondAttribute="bottom" id="sXN-5g-z9c"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="stringLabel" destination="jO5-bB-KxI" id="R8V-sx-ZDl"/>
+                                    <outlet property="valueLabel" destination="izG-zU-2MO" id="M2l-68-ETE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hj8-T4-3Sx" id="8Um-ZP-5c5"/>
+                            <outlet property="delegate" destination="hj8-T4-3Sx" id="ZdN-BT-Ahw"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lw-Nl-nnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2250" y="4500"/>
+        </scene>
+        <!--Motion Test Instructions-->
+        <scene sceneID="a4k-Zh-d6X">
+            <objects>
+                <viewController storyboardIdentifier="LeftArmFront" extendedLayoutIncludesOpaqueBars="YES" id="GWd-TE-dKS" customClass="MotionTestInstructionsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TWb-CM-1g5"/>
+                        <viewControllerLayoutGuide type="bottom" id="hSd-qi-LLt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3BK-gK-qvP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8CA-sE-hlC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="frf-ze-tXt" appends="YES" id="iqE-Ae-ny4"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Motion Test Instructions" id="kQX-0y-BvN">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="9Bx-IK-vK8">
+                            <connections>
+                                <segue destination="kYm-wH-eU7" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="G3O-2k-vB0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Begin" id="PAT-LX-rou">
+                            <connections>
+                                <segue destination="dFW-x6-iOt" kind="push" id="uzI-fe-LkB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="8CA-sE-hlC" id="rU8-ZO-ZZW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lr-eJ-3T8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kYm-wH-eU7" userLabel="Exit" sceneMemberID="exit"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="frf-ze-tXt"/>
+            </objects>
+            <point key="canvasLocation" x="-2910" y="1160"/>
+        </scene>
+        <!--Motion Test Instructions-->
+        <scene sceneID="ijc-ce-DUu">
+            <objects>
+                <viewController storyboardIdentifier="RightLeg" extendedLayoutIncludesOpaqueBars="YES" id="e6p-Qi-XOL" customClass="MotionTestInstructionsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1kp-Tk-HXw"/>
+                        <viewControllerLayoutGuide type="bottom" id="TRG-mb-hFC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yjb-1a-ylO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b16-Lo-phw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9N8-pv-W2H" appends="YES" id="bpj-kt-wO9"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Motion Test Instructions" id="PoA-zs-o2P">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="b4E-WS-MB3">
+                            <connections>
+                                <segue destination="5jq-7L-vpw" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="ya4-oS-jNO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Begin" id="Pln-ex-XUn">
+                            <connections>
+                                <segue destination="cAd-m8-Gcx" kind="push" id="7p2-Vi-88C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="b16-Lo-phw" id="BgX-sg-M6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0d-AG-m5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5jq-7L-vpw" userLabel="Exit" sceneMemberID="exit"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="9N8-pv-W2H"/>
+            </objects>
+            <point key="canvasLocation" x="-1977" y="1160"/>
+        </scene>
+        <!--Motion Test Instructions-->
+        <scene sceneID="qD8-Fu-mqU">
+            <objects>
+                <viewController storyboardIdentifier="LeftArmSide" extendedLayoutIncludesOpaqueBars="YES" id="4fh-sU-sUL" customClass="MotionTestInstructionsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3vr-Dz-nSt"/>
+                        <viewControllerLayoutGuide type="bottom" id="WKp-zN-Csw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gzZ-dJ-65f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mj-ju-V2f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xK4-xb-WOC" appends="YES" id="gyX-lE-yjz"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Motion Test Instructions" id="e2Z-Xm-BNc">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="fFk-00-Yoe">
+                            <connections>
+                                <segue destination="R0Y-T1-6qr" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="Sy4-xf-dhX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Begin" id="asQ-QK-AYi">
+                            <connections>
+                                <segue destination="5wC-3Y-fDG" kind="push" id="sL0-3l-qmI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="7mj-ju-V2f" id="Gng-2b-4bt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9Q-1v-7BO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="R0Y-T1-6qr" userLabel="Exit" sceneMemberID="exit"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xK4-xb-WOC"/>
+            </objects>
+            <point key="canvasLocation" x="-2461" y="1160"/>
+        </scene>
+        <!--Motion Test Instructions-->
+        <scene sceneID="elJ-um-LSK">
+            <objects>
+                <viewController storyboardIdentifier="RightArmSide" extendedLayoutIncludesOpaqueBars="YES" id="8bC-HL-vcW" customClass="MotionTestInstructionsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ex-3f-TYu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lj1-sj-aRh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mzA-0k-MRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFp-7J-3Re">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Ayb-xA-i52" appends="YES" id="Z6j-KF-7zX"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Motion Test Instructions" id="8aQ-VK-GhG">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="fYd-dw-nx0">
+                            <connections>
+                                <segue destination="wT6-oP-2nZ" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="1cq-Lt-YIZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Begin" id="6el-89-XWP">
+                            <connections>
+                                <segue destination="iPS-Xc-nbh" kind="push" id="BIL-rn-6TI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="cFp-7J-3Re" id="7uG-Xh-JhO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FJ-PX-4Qq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wT6-oP-2nZ" userLabel="Exit" sceneMemberID="exit"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Ayb-xA-i52"/>
+            </objects>
+            <point key="canvasLocation" x="-3380" y="1160"/>
+        </scene>
+        <!--Motion Test Instructions-->
+        <scene sceneID="Za8-Qb-AYw">
+            <objects>
+                <viewController storyboardIdentifier="LeftLeg" extendedLayoutIncludesOpaqueBars="YES" id="wau-H7-zmZ" customClass="MotionTestInstructionsViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Als-RR-3hf"/>
+                        <viewControllerLayoutGuide type="bottom" id="baC-hM-rLi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i2g-EQ-mfd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1K-Qz-lrG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Zmu-r2-hZJ" appends="YES" id="Dp9-89-L91"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Motion Test Instructions" id="oXz-95-Lyh">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="yTh-q3-LIe">
+                            <connections>
+                                <segue destination="EOX-oR-xZs" kind="unwind" unwindAction="unWindToTableWithUnwindSegue:" id="qCn-Ub-7I4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Begin" id="5ng-bO-Qif">
+                            <connections>
+                                <segue destination="i4U-Ct-P53" kind="push" id="obO-0M-BPa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="C1K-Qz-lrG" id="48D-ae-aQi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dq1-EK-K46" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EOX-oR-xZs" userLabel="Exit" sceneMemberID="exit"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Zmu-r2-hZJ"/>
+            </objects>
+            <point key="canvasLocation" x="-1508" y="1160"/>
+        </scene>
+        <!--Right Arm Side Motion Test-->
+        <scene sceneID="AbF-D0-Acv">
+            <objects>
+                <viewController id="iPS-Xc-nbh" customClass="MotionTestViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ceK-OH-WDq"/>
+                        <viewControllerLayoutGuide type="bottom" id="guL-mA-16b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tAO-MW-kOz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The test will begin after the beep in " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1b-eB-Ycu">
+                                <rect key="frame" x="72" y="188" width="271" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="mKW-BA-mOI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlA-1N-P0Z">
+                                <rect key="frame" x="127" y="275" width="161" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="wVg-7z-UuE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y1b-eB-Ycu" firstAttribute="leading" secondItem="tAO-MW-kOz" secondAttribute="leadingMargin" constant="52" id="02r-qq-Ek2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y1b-eB-Ycu" secondAttribute="trailing" constant="51" id="6wH-I3-Hv8"/>
+                            <constraint firstItem="GlA-1N-P0Z" firstAttribute="top" secondItem="y1b-eB-Ycu" secondAttribute="bottom" constant="8" id="Knj-BU-PWI"/>
+                            <constraint firstItem="GlA-1N-P0Z" firstAttribute="leading" secondItem="tAO-MW-kOz" secondAttribute="leadingMargin" constant="107" id="NOI-Po-opY"/>
+                            <constraint firstItem="y1b-eB-Ycu" firstAttribute="top" secondItem="ceK-OH-WDq" secondAttribute="bottom" constant="168" id="u7c-6X-4ut"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GlA-1N-P0Z" secondAttribute="trailing" constant="106" id="xeM-kv-8tt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Right Arm Side Motion Test" id="OZD-cd-8tD">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="aer-l3-RM8">
+                            <connections>
+                                <segue destination="PKT-iD-avA" kind="push" identifier="MotionTestResultsSegue" id="laV-pw-6nk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdownTimer" destination="GlA-1N-P0Z" id="OQ6-3l-RZ1"/>
+                        <outlet property="testLabel" destination="y1b-eB-Ycu" id="0hf-6e-nyN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEC-T4-KTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3381" y="2804"/>
+        </scene>
+        <!--Left Arm Front Motion Test-->
+        <scene sceneID="4uA-Oa-rky">
+            <objects>
+                <viewController id="dFW-x6-iOt" customClass="MotionTestViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sTI-61-dj9"/>
+                        <viewControllerLayoutGuide type="bottom" id="u4s-YX-lf9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ft1-o4-pIQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The test will begin after the beep in " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0z-vK-5eK">
+                                <rect key="frame" x="72" y="188" width="271" height="54"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcM-UY-Cxv">
+                                <rect key="frame" x="127" y="289" width="161" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m0z-vK-5eK" firstAttribute="top" secondItem="sTI-61-dj9" secondAttribute="bottom" constant="168" id="2NG-7N-lrF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AcM-UY-Cxv" secondAttribute="trailing" constant="106" id="Kth-Uw-Oj1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m0z-vK-5eK" secondAttribute="trailing" constant="51" id="Sfm-J9-psy"/>
+                            <constraint firstItem="AcM-UY-Cxv" firstAttribute="top" secondItem="m0z-vK-5eK" secondAttribute="bottom" constant="47" id="VQR-ER-KIv"/>
+                            <constraint firstItem="m0z-vK-5eK" firstAttribute="leading" secondItem="ft1-o4-pIQ" secondAttribute="leadingMargin" constant="52" id="bgv-7l-sbG"/>
+                            <constraint firstItem="AcM-UY-Cxv" firstAttribute="leading" secondItem="ft1-o4-pIQ" secondAttribute="leadingMargin" constant="107" id="bif-eV-48y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Left Arm Front Motion Test" id="VnS-tX-ph0">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="wgf-rh-Jl3">
+                            <connections>
+                                <segue destination="PKT-iD-avA" kind="push" identifier="MotionTestResultsSegue" id="OOl-Ct-rNc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdownTimer" destination="AcM-UY-Cxv" id="NSW-T5-MOT"/>
+                        <outlet property="testLabel" destination="m0z-vK-5eK" id="jDa-BT-gY5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRy-L1-Qal" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2911.5" y="2803.5"/>
+        </scene>
+        <!--Left Arm Side Motion Test-->
+        <scene sceneID="AyR-9s-S8A">
+            <objects>
+                <viewController id="5wC-3Y-fDG" customClass="MotionTestViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RIw-Er-LxQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="TSH-ju-J60"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dSa-PB-PKs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The test will begin after the beep in " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aST-dy-3Ec">
+                                <rect key="frame" x="72" y="203" width="271" height="54"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53r-26-vkd">
+                                <rect key="frame" x="127" y="290" width="161" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="aST-dy-3Ec" secondAttribute="trailing" constant="51" id="NaR-pu-JfL"/>
+                            <constraint firstItem="aST-dy-3Ec" firstAttribute="top" secondItem="RIw-Er-LxQ" secondAttribute="bottom" constant="183" id="akN-Mh-uYF"/>
+                            <constraint firstItem="53r-26-vkd" firstAttribute="top" secondItem="aST-dy-3Ec" secondAttribute="bottom" constant="33" id="geg-US-pBn"/>
+                            <constraint firstItem="aST-dy-3Ec" firstAttribute="leading" secondItem="dSa-PB-PKs" secondAttribute="leadingMargin" constant="52" id="h76-sa-9ca"/>
+                            <constraint firstItem="53r-26-vkd" firstAttribute="leading" secondItem="dSa-PB-PKs" secondAttribute="leadingMargin" constant="107" id="vWI-cA-AfZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="53r-26-vkd" secondAttribute="trailing" constant="106" id="zA5-JJ-TBn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Left Arm Side Motion Test" id="fwS-9n-yVV">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="BDq-49-bSn">
+                            <connections>
+                                <segue destination="PKT-iD-avA" kind="push" identifier="MotionTestResultsSegue" id="9bt-1A-jde"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdownTimer" destination="53r-26-vkd" id="a0b-co-txR"/>
+                        <outlet property="testLabel" destination="aST-dy-3Ec" id="CUn-XL-MiY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSj-JA-Zi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2403.5" y="2803.5"/>
+        </scene>
+        <!--Right Leg Motion Test-->
+        <scene sceneID="tnc-ym-Sxl">
+            <objects>
+                <viewController id="cAd-m8-Gcx" customClass="MotionTestViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sk2-3b-99Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="ACE-Po-EM0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hlP-24-k7r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The test will begin after the beep in " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oii-kt-Ulx">
+                                <rect key="frame" x="72" y="188" width="271" height="54"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7l-aC-6sH">
+                                <rect key="frame" x="127" y="275" width="161" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="U7l-aC-6sH" secondAttribute="trailing" constant="106" id="OYd-Qh-u1F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oii-kt-Ulx" secondAttribute="trailing" constant="51" id="QSK-JL-ixg"/>
+                            <constraint firstItem="U7l-aC-6sH" firstAttribute="leading" secondItem="hlP-24-k7r" secondAttribute="leadingMargin" constant="107" id="bPK-9F-fQe"/>
+                            <constraint firstItem="oii-kt-Ulx" firstAttribute="leading" secondItem="hlP-24-k7r" secondAttribute="leadingMargin" constant="52" id="q4a-rr-uU0"/>
+                            <constraint firstItem="U7l-aC-6sH" firstAttribute="top" secondItem="oii-kt-Ulx" secondAttribute="bottom" constant="33" id="wo3-5B-ix8"/>
+                            <constraint firstItem="oii-kt-Ulx" firstAttribute="top" secondItem="sk2-3b-99Z" secondAttribute="bottom" constant="168" id="yej-uV-LvT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Right Leg Motion Test" id="UR7-fA-qof">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Dhy-cw-2Zr">
+                            <connections>
+                                <segue destination="PKT-iD-avA" kind="push" identifier="MotionTestResultsSegue" id="myd-DT-UQT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdownTimer" destination="U7l-aC-6sH" id="EfE-nQ-QbZ"/>
+                        <outlet property="testLabel" destination="oii-kt-Ulx" id="vOg-vQ-fi6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeB-DK-iVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1978.5" y="2803.5"/>
+        </scene>
+        <!--Left Leg Motion Test-->
+        <scene sceneID="o6d-Ua-hvq">
+            <objects>
+                <viewController id="i4U-Ct-P53" customClass="MotionTestViewController" customModule="MotionGraphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gT4-rC-cER"/>
+                        <viewControllerLayoutGuide type="bottom" id="JKm-Is-q1F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yJA-rQ-p5t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The test will begin after the beep in " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFs-ho-TCt">
+                                <rect key="frame" x="72" y="188" width="271" height="54"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEC-sk-LGf">
+                                <rect key="frame" x="127" y="275" width="161" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rEC-sk-LGf" firstAttribute="top" secondItem="iFs-ho-TCt" secondAttribute="bottom" constant="33" id="6zg-pE-0eq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iFs-ho-TCt" secondAttribute="trailing" constant="51" id="76Y-6U-8ha"/>
+                            <constraint firstItem="rEC-sk-LGf" firstAttribute="leading" secondItem="yJA-rQ-p5t" secondAttribute="leadingMargin" constant="107" id="ElR-OL-WLL"/>
+                            <constraint firstItem="iFs-ho-TCt" firstAttribute="top" secondItem="gT4-rC-cER" secondAttribute="bottom" constant="168" id="dpq-RP-6Lv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rEC-sk-LGf" secondAttribute="trailing" constant="106" id="fTq-kF-YzG"/>
+                            <constraint firstItem="iFs-ho-TCt" firstAttribute="leading" secondItem="yJA-rQ-p5t" secondAttribute="leadingMargin" constant="52" id="vKp-Xq-8bz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Left Leg Motion Test" id="8Pd-Sz-3up">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="aTK-8H-T1r">
+                            <connections>
+                                <segue destination="PKT-iD-avA" kind="push" identifier="MotionTestResultsSegue" id="WKR-V6-ciR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdownTimer" destination="rEC-sk-LGf" id="XZG-Jd-0y8"/>
+                        <outlet property="testLabel" destination="iFs-ho-TCt" id="uci-Iv-9bG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfH-Dc-R7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1509.5" y="2803.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YRc-0h-0FR">
+            <objects>
+                <navigationController id="bfZ-63-O8A" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lXB-Xn-GPL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iPS-Xc-nbh" kind="relationship" relationship="rootViewController" id="4xT-NF-JgA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cr6-zq-oUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3607" y="1953"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lNo-n9-72I">
+            <objects>
+                <navigationController id="THO-Hv-Ijt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3HA-yd-bCf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dFW-x6-iOt" kind="relationship" relationship="rootViewController" id="V44-D1-buO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9v9-Jw-0x5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3127" y="1953"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="838-Kp-aAY">
+            <objects>
+                <navigationController id="NlH-7v-uH5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EIc-Pq-Soc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5wC-3Y-fDG" kind="relationship" relationship="rootViewController" id="h8L-xW-adw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96h-Qh-pVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2680" y="1953"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eOT-TY-2Fq">
+            <objects>
+                <navigationController id="dB4-By-QpN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HQs-uL-o8S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cAd-m8-Gcx" kind="relationship" relationship="rootViewController" id="CkP-nc-Eb9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cF-NL-nFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2173" y="1953"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="05V-GM-YSJ">
+            <objects>
+                <navigationController id="i5O-Hw-a0N" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CxQ-lD-YP5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="i4U-Ct-P53" kind="relationship" relationship="rootViewController" id="M9d-yg-JGc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Clq-oa-tpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1748" y="1953"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1ez-qj-9R0">
+            <objects>
+                <viewController id="fDT-cK-BV5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qfz-bK-s2i"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Up-ef-uxa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eNj-fN-i78">
+                        <rect key="frame" x="0.0" y="0.0" width="372" height="149"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUQ-AI-uA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina5_5.fullscreen"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="obO-0M-BPa"/>
+        <segue reference="WKR-V6-ciR"/>
+        <segue reference="BIL-rn-6TI"/>
+        <segue reference="7p2-Vi-88C"/>
+        <segue reference="Iwi-GA-zOs"/>
+        <segue reference="uzI-fe-LkB"/>
+        <segue reference="sL0-3l-qmI"/>
+    </inferredMetricsTieBreakers>
+</document>
